@@ -10,9 +10,9 @@ public class TodoAppConfig {
         return new TodoService(todoRepository);
     }
 
-    @Bean
-    public TodoRepository getTodoRepository(){
-        return new TodoRepository();
-    }
+//    @Bean
+//    public TodoRepository getTodoRepository(){
+//        return new TodoRepository();
+//    }
 
 }

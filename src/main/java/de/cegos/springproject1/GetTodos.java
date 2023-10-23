@@ -28,7 +28,6 @@ public class GetTodos {
         return "success";
     }
 
-
     @PostMapping(value = "/getTodos", consumes = "application/json", produces = "application/text")
     public String getTodo(@RequestBody Long id){
         var allTodos = todoService.getTodos();
