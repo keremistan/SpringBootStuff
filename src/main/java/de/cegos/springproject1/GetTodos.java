@@ -1,10 +1,7 @@
 package de.cegos.springproject1;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Objects;
@@ -33,6 +30,11 @@ public class GetTodos {
         var allTodos = todoService.getTodos();
         var foundTodo = allTodos.stream().filter(td -> Objects.equals(td.getId(), id));
         return foundTodo.toList().get(0).getDescription();
+    }
+
+    @GetMapping(value = "/todo")
+    public String getTodo(@RequestParam String id){
+        return todoService.getATodo(id);
     }
 
     @RequestMapping(value = "/getAllTodos")

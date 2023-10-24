@@ -19,6 +19,15 @@ public class TodoService {
         return todoRepository.findAll();
     }
 
+    public String getATodo(String id){
+        var todo = todoRepository.findById(Long.parseLong(id));
+        if(todo.isPresent()){
+            return todo.get().getDescription();
+        }else{
+            return "couldnt find the todo with given id";
+        }
+    }
+
     public void addTodo(Todo todo){
         todoRepository.save(todo);
         System.out.println("Saved to repo");
