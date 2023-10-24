@@ -35,5 +35,14 @@ public class TodoService {
         System.out.println("Saved to repo");
     }
 
+    public void updateTodo(Long id, String description){
+        var todo = todoRepository.findById(id).get();
+        todo.setDescription(description);
+        todoRepository.save(todo);
+    }
+
+    public void deleteTodo(Long id){
+        todoRepository.deleteById(id);
+    }
 
 }

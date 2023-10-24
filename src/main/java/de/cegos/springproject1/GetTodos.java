@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
 
 @RestController
 public class GetTodos {
@@ -41,5 +40,20 @@ public class GetTodos {
     public List<Todo> getAllTodos(){
         return  todoService.getTodos();
     }
+
+    @PutMapping(value = "/todo", consumes = "application/json")
+    public String updateTodo(@RequestParam Long id, @RequestBody String reqBody){
+        System.out.printf("Received id: %s\n", id);
+        System.out.printf("Received reqBody: %s\n", reqBody);
+        todoService.updateTodo(id, reqBody); // reqBody is a whole json-string. But it updates the todo in db, so...
+        return "Update completed";
+    }
+
+    @DeleteMapping(value = "/todo", consumes = "application/json")
+    public String deleteTodo(@RequestParam Long id){
+        todoService.deleteTodo(id);
+        return "Delete successful";
+    }
+
 
 }
