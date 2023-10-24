@@ -2,6 +2,7 @@ package de.cegos.springproject1;
 
 import de.cegos.springproject1.repository.TodoRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +29,7 @@ public class TodoService {
         }
     }
 
+    @Transactional
     public void addTodo(Todo todo){
         todoRepository.save(todo);
         System.out.println("Saved to repo");
