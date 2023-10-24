@@ -45,4 +45,9 @@ public class TodoService {
         todoRepository.deleteById(id);
     }
 
+    public Todo findByDescription(String description){
+        var todo = todoRepository.findByDescription(description);
+        return todo;
+    }
+
 }

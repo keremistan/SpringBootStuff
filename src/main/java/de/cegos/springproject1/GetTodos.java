@@ -55,5 +55,13 @@ public class GetTodos {
         return "Delete successful";
     }
 
+    @GetMapping(value = "/todoByDescription")
+    public String getByDescription(@RequestParam String description){
+        System.out.printf("Received description: %s\n", description);
+        var todo = todoService.findByDescription(description);
+        System.out.printf("Fetched todo: %s\n", todo);
+        return todo.toString();
+    }
+
 
 }
