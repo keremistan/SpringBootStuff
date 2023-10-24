@@ -1,5 +1,6 @@
 package de.cegos.springproject1;
 
+import de.cegos.springproject1.repository.TodoRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -9,10 +10,4 @@ public class TodoAppConfig {
     public TodoService getTodoService(TodoRepository todoRepository){
         return new TodoService(todoRepository);
     }
-
-//    @Bean
-//    public TodoRepository getTodoRepository(){
-//        return new TodoRepository();
-//    }
-
 }

@@ -1,6 +1,6 @@
 package de.cegos.springproject1;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import de.cegos.springproject1.repository.TodoRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -11,25 +11,18 @@ public class TodoService {
 //    @Autowired
     TodoRepository todoRepository;
 
-    List<Todo> todos;
-
     public TodoService(TodoRepository todoRepository){
-//    public TodoService(){
-        todos = new ArrayList<>();
         this.todoRepository = todoRepository;
     }
 
     public List<Todo> getTodos(){
-        return todos;
-//        return todoRepository.findAll();
+        return todoRepository.findAll();
     }
 
     public void addTodo(Todo todo){
-        todos.add(todo);
+        todoRepository.save(todo);
+        System.out.println("Saved to repo");
     }
 
-    public void save(){
-//        todoRepository.
-    }
 
 }

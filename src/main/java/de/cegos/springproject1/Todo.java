@@ -1,12 +1,18 @@
 package de.cegos.springproject1;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Todo {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String description;
 
-    public Todo(Long id, String description) {
-        this.id = id;
-        this.description = description;
+    public Todo() {
     }
 
     public String getDescription() {
@@ -19,10 +25,6 @@ public class Todo {
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     @Override
