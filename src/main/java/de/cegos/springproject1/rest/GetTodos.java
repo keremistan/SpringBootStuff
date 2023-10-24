@@ -3,6 +3,9 @@ package de.cegos.springproject1.rest;
 import de.cegos.springproject1.services.TodoService;
 import de.cegos.springproject1.data.Todo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,15 +18,15 @@ public class GetTodos {
     TodoService todoService;
 
     @RequestMapping(value = "/")
-    public String hello(){
-        return "Kerem";
+    public ResponseEntity<String> hello(){
+        return new ResponseEntity<>("Kerem", HttpStatus.OK);
     }
 
-    @PostMapping(value = "/add", consumes = "application/json", produces = "application/text")
-    public String addTodo(@RequestBody Todo todo){
+    @PostMapping(value = "/add", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.TEXT_PLAIN_VALUE)
+    public ResponseEntity<String> addTodo(@RequestBody Todo todo){
         System.out.printf("Received todo: %s", todo);
         todoService.addTodo(todo);
-        return "success";
+        return ResponseEntity.ok("Success");
     }
 
     @PostMapping(value = "/getTodos", consumes = "application/json", produces = "application/text")
