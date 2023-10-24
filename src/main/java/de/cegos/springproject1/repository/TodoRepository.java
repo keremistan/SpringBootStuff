@@ -1,6 +1,6 @@
 package de.cegos.springproject1.repository;
 
-import de.cegos.springproject1.Todo;
+import de.cegos.springproject1.data.Todo;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.ListCrudRepository;
 

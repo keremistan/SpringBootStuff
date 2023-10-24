@@ -1,6 +1,7 @@
-package de.cegos.springproject1;
+package de.cegos.springproject1.configs;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import de.cegos.springproject1.data.Todo;
+import de.cegos.springproject1.services.TodoService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 

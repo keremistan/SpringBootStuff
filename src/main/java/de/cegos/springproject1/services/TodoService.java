@@ -1,10 +1,9 @@
-package de.cegos.springproject1;
+package de.cegos.springproject1.services;
 
+import de.cegos.springproject1.data.Todo;
 import de.cegos.springproject1.repository.TodoRepository;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class TodoService {

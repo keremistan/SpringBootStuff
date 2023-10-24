@@ -1,5 +1,7 @@
-package de.cegos.springproject1;
+package de.cegos.springproject1.rest;
 
+import de.cegos.springproject1.services.TodoService;
+import de.cegos.springproject1.data.Todo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

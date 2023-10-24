@@ -1,6 +1,7 @@
-package de.cegos.springproject1;
+package de.cegos.springproject1.configs;
 
 import de.cegos.springproject1.repository.TodoRepository;
+import de.cegos.springproject1.services.TodoService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
