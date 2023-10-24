@@ -63,5 +63,10 @@ public class GetTodos {
         return todo.toString();
     }
 
+    @GetMapping(value = "/priorTodos")
+    public List<Todo> getTodos(@RequestParam Long id){
+        return todoService.getPriorTodos(id);
+    }
+
 
 }

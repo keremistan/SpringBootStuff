@@ -50,4 +50,8 @@ public class TodoService {
         return todo;
     }
 
+    public List<Todo> getPriorTodos(Long id){
+        return todoRepository.findPriorTodos(id);
+    }
+
 }
