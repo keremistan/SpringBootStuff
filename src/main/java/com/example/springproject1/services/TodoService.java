@@ -1,7 +1,7 @@
-package de.cegos.springproject1.services;
+package com.example.springproject1.services;
 
-import de.cegos.springproject1.data.Todo;
-import de.cegos.springproject1.repository.TodoRepository;
+import com.example.springproject1.data.Todo;
+import com.example.springproject1.repository.TodoRepository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package de.cegos.springproject1.rest;
+package com.example.springproject1.rest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

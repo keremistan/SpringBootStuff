@@ -1,7 +1,7 @@
-package de.cegos.springproject1.rest;
+package com.example.springproject1.rest;
 
-import de.cegos.springproject1.services.TodoService;
-import de.cegos.springproject1.data.Todo;
+import com.example.springproject1.data.Todo;
+import com.example.springproject1.services.TodoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

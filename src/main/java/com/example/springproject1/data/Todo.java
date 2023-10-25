@@ -1,4 +1,4 @@
-package de.cegos.springproject1.data;
+package com.example.springproject1.data;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,7 +1,7 @@
-package de.cegos.springproject1.configs;
+package com.example.springproject1.configs;
 
-import de.cegos.springproject1.data.Todo;
-import de.cegos.springproject1.services.TodoService;
+import com.example.springproject1.data.Todo;
+import com.example.springproject1.services.TodoService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
