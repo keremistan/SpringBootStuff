@@ -73,5 +73,4 @@ public class GetTodos {
         return todoService.getPriorTodos(id);
     }
 
-
 }
